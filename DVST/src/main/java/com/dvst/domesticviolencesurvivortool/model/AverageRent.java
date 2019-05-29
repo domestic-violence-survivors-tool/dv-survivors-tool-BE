@@ -12,15 +12,13 @@ public class AverageRent {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long rentid;
 
-    private String sharedbedroomrent;
+    private int studioroomapartmentrent;
 
-    private String studioroomapartmentrent;
+    private int onebedroomapartmentrent;
 
-    private String onebedroomapartmentrent;
+    private int twobedroomapartmentrent;
 
-    private String twobedroomapartmentrent;
-
-    private String threebedroomapartmentrent;
+    private int threebedroomapartmentrent;
 
     @ManyToOne
     @JoinColumn(name = "stateid")
@@ -30,8 +28,7 @@ public class AverageRent {
     public AverageRent() {
 
     }
-    public AverageRent(String sharedbedroomrent, String studioroomapartmentrent, String onebedroomapartmentrent, String twobedroomapartmentrent, String threebedroomapartmentrent) {
-        this.sharedbedroomrent = sharedbedroomrent;
+    public AverageRent(int studioroomapartmentrent, int onebedroomapartmentrent, int twobedroomapartmentrent, int threebedroomapartmentrent) {
         this.studioroomapartmentrent = studioroomapartmentrent;
         this.onebedroomapartmentrent = onebedroomapartmentrent;
         this.twobedroomapartmentrent = twobedroomapartmentrent;
@@ -48,43 +45,35 @@ public class AverageRent {
         this.rentid = rentid;
     }
 
-    public String getSharedBedroomRent() {
-        return sharedbedroomrent;
-    }
-
-    public void setSharedBedroomRent(String sharedbedroomrent) {
-        this.sharedbedroomrent = sharedbedroomrent;
-    }
-
-    public String getStudioRoomApartmentRent() {
+    public int getStudioRoomApartmentRent() {
         return studioroomapartmentrent;
     }
 
-    public void setStudioRoomApartmentRent(String studioroomapartmentrent) {
+    public void setStudioRoomApartmentRent(int studioroomapartmentrent) {
         this.studioroomapartmentrent = studioroomapartmentrent;
     }
 
-    public String getOneBedRoomApartmentRent() {
+    public int getOneBedRoomApartmentRent() {
         return onebedroomapartmentrent;
     }
 
-    public void setOneBedRoomApartmentRent(String oneBedRoomApartmentRent) {
+    public void setOneBedRoomApartmentRent(int oneBedRoomApartmentRent) {
         this.onebedroomapartmentrent = onebedroomapartmentrent;
     }
 
-    public String getTwoBedRoomApartmentRent() {
+    public int getTwoBedRoomApartmentRent() {
         return twobedroomapartmentrent;
     }
 
-    public void setTwoBedRoomApartmentRent(String twobedroomapartmentrent) {
+    public void setTwoBedRoomApartmentRent(int twobedroomapartmentrent) {
         this.twobedroomapartmentrent = twobedroomapartmentrent;
     }
 
-    public String getThreeBedRoomApartmentRent() {
+    public int getThreeBedRoomApartmentRent() {
         return threebedroomapartmentrent;
     }
 
-    public void setThreeBedRoomApartmentRent(String threebedroomapartmentrent) {
+    public void setThreeBedRoomApartmentRent(int threebedroomapartmentrent) {
         this.threebedroomapartmentrent = threebedroomapartmentrent;
     }
 
