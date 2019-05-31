@@ -34,7 +34,7 @@
 //                                   "/swagger-ui.html",        // swagger
 //                                   "/webjars/**"              // swagger
 //                        ).permitAll().authenticated()
-//                .antMatchers("/users/**", "/courses/**", "/students/**", "/actuator/**").hasAnyRole("ROLE_ADMIN")
+//                .antMatchers("/users/**", "/courses/**", "/students/**", "/actuator/**", "/admin/**").hasAnyRole("ROLE_ADMIN")
 //            .and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
 //
 //        // http.requiresChannel().anyRequest().requiresSecure();

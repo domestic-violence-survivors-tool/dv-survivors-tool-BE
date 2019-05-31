@@ -21,7 +21,7 @@ public class Swagger2Config
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors
-                        .basePackage("com.dvst.domesticviolencesurvivaltool"))
+                        .basePackage("com.dvst.domesticviolencesurvivortool"))
                 .paths(PathSelectors.regex("/.*"))
                 .build().apiInfo(apiEndPointsInfo());
     }
