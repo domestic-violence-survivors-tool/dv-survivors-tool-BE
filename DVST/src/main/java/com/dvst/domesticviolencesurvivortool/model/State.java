@@ -16,16 +16,21 @@ public class State {
 
     private String state;
 
+    private String crimerating;
+
     @OneToMany(mappedBy = "state", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("state")
     private List<AverageRent> rent = new ArrayList<>();
 
+
     public State() {
 
     }
-    public State(String state) {
+    public State(String state, String crimerating) {
         this.state = state;
+        crimerating = crimerating;
     }
+
 
 
     public long getStateid() {
@@ -42,6 +47,14 @@ public class State {
 
     public void setState(String state) {
         this.state = state;
+    }
+
+    public String getCrimeRating() {
+        return crimerating;
+    }
+
+    public void setCrimeRating(String crimerating) {
+        crimerating = crimerating;
     }
 
     public List<AverageRent> getRent() {

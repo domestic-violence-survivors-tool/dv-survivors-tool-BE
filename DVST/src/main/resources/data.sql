@@ -4,20 +4,20 @@ FROM averagerent;
 DELETE
 FROM State;
 
-INSERT INTO state (stateid, state)
-	VALUES (1, 'Alabama'), (2, 'Alaska'), (3, 'Arizona'), (4, 'Arkansas'),
-           (5, 'California'), (6, 'Colorado'), (7, 'Connecticut'),(8, 'Delaware'),
-           (9, 'Florida'), (10, 'Georgia'), (11, 'Hawaii'), (12, 'Idaho'),
-           (13, 'Illinois'), (14, 'Indiana'), (15, 'Iowa'), (16, 'Kansas'),
-           (17, 'Kentucky'), (18, 'Louisiana'), (19, 'Maine'), (20, 'Maryland'),
-           (21, 'Massachusetts'), (22, 'Michigan'), (23, 'Minnesota'), (24, 'Mississippi'),
-           (25, 'Missouri'), (26, 'Montana'), (27, 'Nebraska'), (28, 'Nevada'),
-           (29, 'New Hampshire'), (30, 'New Jersey'), (31, 'New Mexico'), (32, 'New York'),
-           (33, 'North Carolina'), (34, 'North Dakota'), (35, 'Ohio'), (36, 'Oklahoma'),
-           (37, 'Oregon'), (38, 'Pennsylvania'), (39, 'Rhode Island'), (40, 'South Carolina'),
-           (41, 'South Dakota'), (42, 'Tennessee'), (43, 'Texas'), (44, 'Utah'),
-           (45, 'Vermont'), (46, 'Virginia'), (47, 'Washington'), (48, 'West Virginia'),
-           (49, 'Wisconsin'), (50, 'Wyoming');
+INSERT INTO state (stateid, state, crimerating)
+	VALUES (1, 'Alabama', '44'), (2, 'Alaska', '49'), (3, 'Arizona', '43'), (4, 'Arkansas', '46'),
+           (5, 'California', '35'), (6, 'Colorado', '33'), (7, 'Connecticut', '8'),(8, 'Delaware', '34'),
+           (9, 'Florida', '30'), (10, 'Georgia', '37'), (11, 'Hawaii', '25'), (12, 'Idaho', '5'),
+           (13, 'Illinois', '23'), (14, 'Indiana', '27'), (15, 'Iowa', '17'), (16, 'Kansas', '39'),
+           (17, 'Kentucky', '13'), (18, 'Louisiana', '48'), (19, 'Maine', '1'), (20, 'Maryland', '32'),
+           (21, 'Massachusetts', '10'), (22, 'Michigan', '20'), (23, 'Minnesota', '15'), (24, 'Mississippi', '26'),
+           (25, 'Missouri', '42'), (26, 'Montana', '29'), (27, 'Nebraska', '19'), (28, 'Nevada', '41'),
+           (29, 'New Hampshire', '3'), (30, 'New Jersey', '4'), (31, 'New Mexico', '50'), (32, 'New York', '12'),
+           (33, 'North Carolina', '28'), (34, 'North Dakota', '18'), (35, 'Ohio', '22'), (36, 'Oklahoma', '40'),
+           (37, 'Oregon', '31'), (38, 'Pennsylvania', '11'), (39, 'Rhode Island', '7'), (40, 'South Carolina', '45'),
+           (41, 'South Dakota', '21'), (42, 'Tennessee', '47'), (43, 'Texas', '36'), (44, 'Utah', '24'),
+           (45, 'Vermont', '2'), (46, 'Virginia', '6'), (47, 'Washington', '38'), (48, 'West Virginia', '16'),
+           (49, 'Wisconsin', '14'), (50, 'Wyoming', '9');
 
 INSERT INTO averagerent (rentid, studioroomapartmentrent, onebedroomapartmentrent, twobedroomapartmentrent, threebedroomapartmentrent, stateid)
     VALUES(51, 591, 639, 772, 1021, 1),

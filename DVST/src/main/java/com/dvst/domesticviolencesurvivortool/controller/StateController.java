@@ -31,11 +31,11 @@ public class StateController {
 
         ArrayList<State> allStates = stateService.findAll();
 
-        if (allStates == null) {
-            throw new ResourseNotFoundException("no states found");
-        } else{
-            logger.info("/states accessed");
-        }
+//        if (allStates == null) {
+//            throw new ResourseNotFoundException("no states found");
+//        } else{
+//            logger.info("/states accessed");
+//        }
 
         return new ResponseEntity<>(allStates, HttpStatus.OK);
 

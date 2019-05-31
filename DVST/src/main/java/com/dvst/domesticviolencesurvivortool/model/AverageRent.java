@@ -20,6 +20,13 @@ public class AverageRent {
 
     private int threebedroomapartmentrent;
 
+    /////////////// I would of done this instead to make it more loosly cupled.
+    ///
+    /// private String renttype;
+    ///
+    /// private int rent;
+
+
     @ManyToOne
     @JoinColumn(name = "stateid")
     @JsonIgnoreProperties("rent")
