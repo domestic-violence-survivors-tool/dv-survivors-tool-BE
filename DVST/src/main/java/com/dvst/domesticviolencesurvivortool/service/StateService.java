@@ -8,4 +8,12 @@ public interface StateService {
 
     ArrayList<State> findAll();
 
+    State findStateById(long id);
+
+    void delete(long id);
+
+    State save(State state);
+
+    State update(State state, long id);
+
 }

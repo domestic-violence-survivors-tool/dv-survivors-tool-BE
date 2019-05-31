@@ -12,19 +12,9 @@ public class AverageRent {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long rentid;
 
-    private int studioroomapartmentrent;
+    private String renttype;
 
-    private int onebedroomapartmentrent;
-
-    private int twobedroomapartmentrent;
-
-    private int threebedroomapartmentrent;
-
-    /////////////// I would of done this instead to make it more loosly cupled.
-    ///
-    /// private String renttype;
-    ///
-    /// private int rent;
+    private int rent;
 
 
     @ManyToOne
@@ -35,13 +25,13 @@ public class AverageRent {
     public AverageRent() {
 
     }
-    public AverageRent(int studioroomapartmentrent, int onebedroomapartmentrent, int twobedroomapartmentrent, int threebedroomapartmentrent) {
-        this.studioroomapartmentrent = studioroomapartmentrent;
-        this.onebedroomapartmentrent = onebedroomapartmentrent;
-        this.twobedroomapartmentrent = twobedroomapartmentrent;
-        this.threebedroomapartmentrent = threebedroomapartmentrent;
+
+    public AverageRent(String renttype, int rent) {
+        this.renttype = renttype;
+        this.rent = rent;
         this.state = state;
     }
+
 
 
     public long getRentid() {
@@ -52,38 +42,21 @@ public class AverageRent {
         this.rentid = rentid;
     }
 
-    public int getStudioRoomApartmentRent() {
-        return studioroomapartmentrent;
+    public String getRenttype() {
+        return renttype;
     }
 
-    public void setStudioRoomApartmentRent(int studioroomapartmentrent) {
-        this.studioroomapartmentrent = studioroomapartmentrent;
+    public void setRenttype(String renttype) {
+        this.renttype = renttype;
     }
 
-    public int getOneBedRoomApartmentRent() {
-        return onebedroomapartmentrent;
+    public int getRent() {
+        return rent;
     }
 
-    public void setOneBedRoomApartmentRent(int oneBedRoomApartmentRent) {
-        this.onebedroomapartmentrent = onebedroomapartmentrent;
+    public void setRent(int rent) {
+        this.rent = rent;
     }
-
-    public int getTwoBedRoomApartmentRent() {
-        return twobedroomapartmentrent;
-    }
-
-    public void setTwoBedRoomApartmentRent(int twobedroomapartmentrent) {
-        this.twobedroomapartmentrent = twobedroomapartmentrent;
-    }
-
-    public int getThreeBedRoomApartmentRent() {
-        return threebedroomapartmentrent;
-    }
-
-    public void setThreeBedRoomApartmentRent(int threebedroomapartmentrent) {
-        this.threebedroomapartmentrent = threebedroomapartmentrent;
-    }
-
 
     public State getState() {
         return state;
